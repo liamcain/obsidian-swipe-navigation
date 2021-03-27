@@ -34,7 +34,6 @@ export class SwipeManager {
   }
 
   handleTouchStart(e: TouchEvent): void {
-    console.log("state", this.gestureState);
     if (this.gestureState === "notouch" && e.touches.length === 2) {
       this.gestureState = "considering";
     } else {
@@ -72,7 +71,6 @@ export class SwipeManager {
         !sameDirection(x1Diff, x2Diff)
       ) {
         this.gestureState = "invalid";
-        console.log("no longer considering", y1Diff, y2Diff);
       }
 
       if (
@@ -88,8 +86,6 @@ export class SwipeManager {
   handleTouchEnd(e: TouchEvent): void {
     if (this.gestureState === "tracking" || this.gestureState === "complete") {
       e.stopImmediatePropagation();
-    } else {
-      console.log("no stopping propogation", this.gestureState);
     }
 
     if (this.gestureState === "tracking") {
@@ -100,10 +96,8 @@ export class SwipeManager {
       const x2Diff = fingerTwoDelta.x - e.touches[0].clientX;
 
       if (x1Diff && x2Diff > TWO_FINGER_SWIPE_THRESHOLD) {
-        console.log("triggering swipe left", x1Diff, x2Diff);
         this.onTwoFingerSwipe("left");
       } else if (x1Diff && x2Diff < -TWO_FINGER_SWIPE_THRESHOLD) {
-        console.log("triggering swipe right", x1Diff, x2Diff);
         this.onTwoFingerSwipe("right");
       }
       this.gestureState = "complete";
