@@ -4,7 +4,7 @@ An [Obsidian](https://obsidian.md/) plugin that a adds two-finger swipe gesture 
 
 ## Demo
 
-![swipe-navigation](https://user-images.githubusercontent.com/693981/112721622-3dc16a80-8edb-11eb-83a3-317b37c3f08f.gif)
+<img src="https://user-images.githubusercontent.com/693981/112721622-3dc16a80-8edb-11eb-83a3-317b37c3f08f.gif" width="256" height="455">
 
 ---
 
