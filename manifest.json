@@ -1,0 +1,10 @@
+{
+  "id": "swipe-navigation",
+  "name": "Swipe Navigation",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Liam Cain",
+  "authorUrl": "https://github.com/liamcain/",
+  "isDesktopOnly": false,
+  "minAppVersion": "0.9.11"
+}
